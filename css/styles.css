@@ -71,7 +71,7 @@ body {
   overflow: hidden;
 }
 /* =================== Header style ==================*/
-.header {
+.page-header {
   border-bottom: 1px solid #e7e9fc;
   position: sticky;
   top: 0;
@@ -85,7 +85,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.navigation {
+.page-navigation {
   display: flex;
   align-items: center;
 }
@@ -113,20 +113,21 @@ body {
   font-weight: 500;
   color: #2e2f42;
 }
-.menu-item {
+.menu-link {
   display: block;
-  padding: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover,
 .menu-link:focus {
   color: #404bbf;
 }
-.menu-item.current {
+.menu-link.current {
   position: relative;
   color: #404bbf;
 }
-.menu-item.current::after {
+.menu-link.current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -139,24 +140,12 @@ body {
 
 .address {
   font-style: normal;
-  margin-left: auto;
+  color: #434455;
 }
 .address-list {
   display: flex;
   gap: 40px;
-}
-.address-link {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  display: block;
-  padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.address-link:hover,
-.address-link:focus {
-  color: #404bbf;
+  align-items: center;
 }
 /* =========== hero =========== */
 .hero {
@@ -207,6 +196,7 @@ body {
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-link:hover,
 .btn-link:focus {
